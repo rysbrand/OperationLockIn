@@ -134,8 +134,12 @@ export default function WorkoutPlan() {
         .ex-row:hover { border-color: #2a2a2a; }
         .ex-name { font-size: 0.88rem; font-weight: 500; color: #e8e4dc; margin-bottom: 0.15rem; }
         .ex-note { font-size: 0.71rem; color: #555; font-style: italic; line-height: 1.4; }
+        .ex-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; flex-shrink: 0; }
         .ex-sets { font-family: 'Bebas Neue', sans-serif; font-size: 0.95rem; letter-spacing: 0.05em; color: #ef4444; white-space: nowrap; text-align: right; }
         .liss .ex-sets { color: #3b82f6; }
+        .yt-btn { display: flex; align-items: center; gap: 0.3rem; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #555; background: #161616; border: 1px solid #222; border-radius: 2rem; padding: 0.2rem 0.5rem; cursor: pointer; text-decoration: none; transition: all 0.2s; white-space: nowrap; }
+        .yt-btn:hover { color: #ff4444; border-color: #ff444466; background: #1a0a0a; }
+        .yt-btn svg { flex-shrink: 0; }
         .sec-label { font-family: 'Bebas Neue', sans-serif; font-size: 0.85rem; letter-spacing: 0.15em; color: #333; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
         .sec-label::after { content: ''; flex: 1; height: 1px; background: #1a1a1a; }
       `}</style>
@@ -182,15 +186,26 @@ export default function WorkoutPlan() {
         {/* Exercises */}
         <div className={current.tag === 'LISS' && section === 'lifts' ? 'liss' : ''} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
           <div className="sec-label">{section === 'warmup' ? 'Flexibility + Activation — 8–12 min' : section === 'lifts' ? current.tag === 'LISS' ? 'Cardio + Core Work' : 'Main Lifts' : 'Flexibility + Recovery — 10–15 min'}</div>
-          {current[section].map((ex, i) => (
-            <div className="ex-row" key={i}>
-              <div>
-                <div className="ex-name">{ex.name}</div>
-                {ex.note && <div className="ex-note">{ex.note}</div>}
+          {current[section].map((ex, i) => {
+            const ytUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(ex.name + ' exercise tutorial')}`
+            return (
+              <div className="ex-row" key={i}>
+                <div>
+                  <div className="ex-name">{ex.name}</div>
+                  {ex.note && <div className="ex-note">{ex.note}</div>}
+                </div>
+                <div className="ex-right">
+                  <div className="ex-sets">{ex.sets}</div>
+                  <a href={ytUrl} target="_blank" rel="noopener noreferrer" className="yt-btn">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/>
+                    </svg>
+                    demo
+                  </a>
+                </div>
               </div>
-              <div className="ex-sets">{ex.sets}</div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </div>
