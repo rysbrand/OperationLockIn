@@ -94,9 +94,9 @@ export default function GroceryList() {
       </div>
 
       {/* Costco tip */}
-      <div style={{ background: '#0a0f1a', border: '1px solid #1a2a3a', borderRadius: '0.6rem', padding: '0.7rem 1rem', fontSize: '0.75rem', color: '#5a8ab0', marginBottom: '1.5rem', lineHeight: 1.5 }}>
+      {/* <div style={{ background: '#0a0f1a', border: '1px solid #1a2a3a', borderRadius: '0.6rem', padding: '0.7rem 1rem', fontSize: '0.75rem', color: '#5a8ab0', marginBottom: '1.5rem', lineHeight: 1.5 }}>
         💡 <strong style={{ color: '#7ab0d0' }}>Sioux Falls Costco note:</strong> This location is noted as relatively small — if something's out of stock, the Kirkland frozen proteins and veg are the most consistent finds. Frozen beats fresh for food waste on a 4-week plan anyway.
-      </div>
+      </div> */}
 
       {/* Categories */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
