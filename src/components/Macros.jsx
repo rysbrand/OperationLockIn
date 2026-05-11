@@ -45,9 +45,9 @@ export default function Macros() {
       </div>
 
       {/* TDEE context banner */}
-      <div style={{ background: '#0a0f1a', border: '1px solid #1a2a3a', borderRadius: '0.6rem', padding: '0.75rem 1rem', fontSize: '0.75rem', color: '#5a8ab0', marginBottom: '1.5rem', lineHeight: 1.6 }}>
+      {/* <div style={{ background: '#0a0f1a', border: '1px solid #1a2a3a', borderRadius: '0.6rem', padding: '0.75rem 1rem', fontSize: '0.75rem', color: '#5a8ab0', marginBottom: '1.5rem', lineHeight: 1.6 }}>
         📊 <strong style={{ color: '#7ab0d0' }}>Estimated TDEE:</strong> ~2,100–2,300 cal/day. At 1,698 cal you are in a ~500 cal deficit — the evidence-based sweet spot for fat loss while preserving muscle. Never go below 1,200 cal/day without medical supervision.
-      </div>
+      </div> */}
 
       {/* Macro cards */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.75rem', marginBottom: '2rem' }}>
@@ -66,9 +66,9 @@ export default function Macros() {
       </div>
 
       {/* Protein science note */}
-      <div style={{ background: '#0a1a0a', border: '1px solid #1a3a1a', borderRadius: '0.6rem', padding: '0.75rem 1rem', fontSize: '0.75rem', color: '#5ab05a', marginBottom: '1.5rem', lineHeight: 1.6 }}>
+      {/* <div style={{ background: '#0a1a0a', border: '1px solid #1a3a1a', borderRadius: '0.6rem', padding: '0.75rem 1rem', fontSize: '0.75rem', color: '#5ab05a', marginBottom: '1.5rem', lineHeight: 1.6 }}>
         💪 <strong style={{ color: '#7ad07a' }}>Why 178g protein?</strong> This food set naturally produces ~175–182g/day. That is 2.25g/kg — at the upper end of the evidence-based 1.6–2.2g/kg range for recomposition, which is ideal for muscle retention in a calorie deficit. Protein is spread across 5 eating occasions to maximise muscle protein synthesis throughout the day.
-      </div>
+      </div> */}
 
       {/* Per-meal breakdown */}
       <div style={{ marginBottom: '2rem' }}>
